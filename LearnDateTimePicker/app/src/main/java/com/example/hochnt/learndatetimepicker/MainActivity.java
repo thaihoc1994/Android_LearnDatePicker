@@ -3,8 +3,7 @@ package com.example.hochnt.learndatetimepicker;
 import android.annotation.TargetApi;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.icu.text.SimpleDateFormat;
-import android.icu.util.Calendar;
+
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +13,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-@TargetApi(Build.VERSION_CODES.N)
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+
+@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 public class MainActivity extends AppCompatActivity {
 
     TextView txtDate, txtTime;
@@ -39,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 xuLyHienThiDatePicker();
             }
         });
-        
+
         btnTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
